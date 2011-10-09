@@ -1,0 +1,17 @@
+PATH
+  remote: .
+  specs:
+    psn_trophies (0.0.1)
+      nokogiri (~> 1.5.0)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    nokogiri (1.5.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  nokogiri (~> 1.5.0)
+  psn_trophies!
