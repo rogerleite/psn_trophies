@@ -7,9 +7,15 @@ PATH
 GEM
   remote: http://rubygems.org/
   specs:
+    ansi (1.3.0)
     fakeweb (1.3.0)
     minitest (2.6.1)
+    minitest-reporters (0.4.0)
+      ansi
+      minitest (~> 2.0)
+      ruby-progressbar
     nokogiri (1.5.0)
+    ruby-progressbar (0.0.10)
 
 PLATFORMS
   ruby
@@ -17,5 +23,6 @@ PLATFORMS
 DEPENDENCIES
   fakeweb
   minitest
+  minitest-reporters
   nokogiri (~> 1.5.0)
   psn_trophies!

@@ -3,6 +3,11 @@ require 'bundler/setup'
 require 'minitest/autorun'
 require 'minitest/spec'
 require 'fakeweb'
+
+require 'minitest/reporters'
+MiniTest::Unit.runner = MiniTest::SuiteRunner.new
+MiniTest::Unit.runner.reporters << MiniTest::Reporters::SpecReporter.new
+
 require 'psn_trophies'
 
 =begin
