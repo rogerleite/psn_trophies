@@ -1,0 +1,163 @@
+HTTP/1.1 200 OK
+Date: Mon, 10 Oct 2011 02:13:49 GMT
+Server: Apache
+Content-Length: 5660
+Set-Cookie: JSESSIONID=TMWhTSJdL9vHHlbm88JTssVLpKQxWHflTppfGh5tryMp78nZPvC6!1120965157; path=/
+Content-Language: en-US
+X-Powered-By: Servlet/2.5 JSP/2.1
+Content-Type: text/html; charset=UTF-8
+Set-Cookie: SONYCOOKIE1=593799360.20480.0000; path=/
+
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  
+
+
+
+
+
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+  <link rel="shortcut icon" href="http://webassets.scea.com/playstation/assets/favicon.ico"/ type="image/x-icon">
+  <link rel="stylesheet" href="http://webassets.scea.com/playstation/assets/css/reset.css" type="text/css" media="screen" charset="utf-8"/>
+  <link rel="stylesheet" href="http://webassets.scea.com/playstation/assets/css/global.css" type="text/css" media="screen" charset="utf-8"/>
+  <link rel="stylesheet" href="http://webassets.scea.com/playstation/assets/css/modules.css" type="text/css" media="screen" charset="utf-8"/>
+  <link rel="stylesheet" href="http://webassets.scea.com/playstation/assets/css/additional.css" type="text/css" media="screen" charset="utf-8"/>
+  <!--[if lte IE 7]>
+    <link rel="stylesheet" href="http://webassets.scea.com/playstation/assets/css/ie.css" type="text/css" media="screen" charset="utf-8"/> 
+    <link rel="stylesheet" href="http://webassets.scea.com/playstation/assets/css/additionalie.css" type="text/css" media="screen" charset="utf-8"/> 
+  <![endif]-->
+
+  <link rel="stylesheet" href="http://webassets.scea.com/playstation/assets/css/temp.css" type="text/css" media="screen" charset="utf-8"/>
+ 
+  	<link rel="stylesheet" type="text/css" media="all" href="http://webassets.scea.com/playstation/stylesheets/lightview.css"/>
+  	<link rel="stylesheet" type="text/css" media="all" href="http://webassets.scea.com/playstation/stylesheets/prototip.css"/>
+	<link rel="stylesheet" type="text/css" media="all" href="http://webassets.scea.com/playstation/stylesheets/trophies.css"/>
+	
+	<!--[if lt IE 7]> 
+	<link rel="stylesheet" type="text/css" media="all" href="http://webassets.scea.com/playstation/stylesheets/bie6.css"/>
+	<![endif]-->
+	<!--[if (gte IE 7)]>
+    <link rel="stylesheet" type="text/css" media="all" href="http://webassets.scea.com/playstation/stylesheets/bie7.css"/>
+	<![endif]-->
+	   
+  <script type="text/javascript" charset="utf-8" src="http://webassets.scea.com/playstation/assets/js/swfobject.js"></script>  
+  <script type="text/javascript" src="http://webassets.scea.com/playstation/javascripts/protoaculous.1.8.2.p1.6.1_rc3.min_patch.js"></script>
+  <script type="text/javascript" src="http://webassets.scea.com/playstation/javascripts/lightview.js"></script>
+  <script type="text/javascript" src="http://webassets.scea.com/playstation/javascripts/prototip.js"></script>
+  <script type="text/javascript" src="http://webassets.scea.com/playstation/javascripts/livepipe/livepipe.js"></script>
+  <script type="text/javascript" src="http://webassets.scea.com/playstation/javascripts/livepipe/scrollbar.js"></script>
+  
+  <script type="text/javascript" src="http://webassets.scea.com/playstation/javascripts/application.js"></script>
+
+  <script src="http://webassets.scea.com/playstation/assets/js/AC_RunActiveContent.js" type="text/javascript"></script>
+  <title></title>
+
+  <script type="text/javascript">
+    var busyPath = "/playstation/pages/busy.html";
+  </script>
+</head>
+  <body>
+    <!-- /main -->
+	<div id="main" name="main" class="clearfix">
+		<!-- breadcrumb -->
+       	 
+
+
+<div id="breadcrumb">
+ <h3 style="font-size:18px;"> </h3>
+</div>
+
+
+
+
+
+		<!-- /breadcrumb -->
+	<!-- 	<div class="share">
+          <a href="#" id="overlayShare" onclick="alert('implement')"><span>Share this</span></a>
+		</div>   -->      
+        <!-- content -->
+        <div id="trophiescontent">
+          
+
+
+<script>
+
+function getDocHeight() 
+{
+    var D = document;
+    var agt=navigator.userAgent.toLowerCase();
+    
+    return Math.max(
+    	Math.max(D.body.scrollHeight, D.documentElement.scrollHeight),
+        Math.max(D.body.offsetHeight, D.documentElement.offsetHeight)
+        
+    );
+}
+
+function setIFrameHeightToCookie(cookieValue,iframeId)
+{
+	var formHeight = getDocHeight();
+	var agt=navigator.userAgent.toLowerCase();
+	
+	if (agt.indexOf("opera") != -1 || agt.indexOf("safari") != -1) 
+	{
+	    var D = document;
+		formHeight =Math.max(
+    	Math.max(D.body.scrollHeight, D.documentElement.scrollHeight),
+        Math.max(D.body.offsetHeight, D.documentElement.offsetHeight));  
+    }
+	else
+		formHeight =document.getElementById('main').scrollHeight+200;
+	    var iFrame = window.parent.document.getElementById(iframeId);
+	
+ 	if (formHeight != null && iFrame !=null)
+	{
+		iFrame.height = eval(formHeight) ;
+	
+		if(iFrame.style.height=='Nan' || iFrame.style.height=='0')
+		{
+			iFrame.style.height = '200px';
+		}
+	} 
+	else if (iFrame !=null)
+	{
+		iFrame.height = '200px';
+	}
+}	
+
+setIFrameHeightToCookie('page-height','profileFrame');
+</script>
+
+<div class="trophiescontainer">
+  <div class="trophiesinnermodule">
+    <div class="top_left"></div>
+		<div class="errorSection">
+			<h2 align="center">No User Profile</h2>
+			<h4 align="center">The user you're looking for does not have a profile</h4>
+	  </div>
+	</div>
+</div>
+        </div><!-- /content -->
+        
+
+
+<p class="profile_note">Note: The above information is dependent on the proper functioning of the PlayStation®Network. Information is not updated in real time.</p>
+
+    	<div id="tipHolder" style="display:none;"></div>
+    </div>
+    <!-- /main -->      
+  </body>
+  
+  <script>
+    if(parent.document.getElementById('profileFrame')!=null){
+    }
+  </script>
+</html>
+

@@ -16,6 +16,7 @@ Usage
     require "psn_trophies"
     
     client = PsnTrophies::Client.new
-    played_games = client.trophies("psn_id")  # ex. LeiteBR
+    played_games = client.trophies("valid_psn_id")  # ex. LeiteBR
     played_games.map(&:title)  #=> ["Dragon Age II", "GTA IV", ... etc.]
   
+    client.trophies("invalid_psn_id")  # => raises PsnTrophies::NoUserProfileError

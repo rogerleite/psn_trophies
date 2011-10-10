@@ -4,14 +4,17 @@ require "uri"
 
 module PsnTrophies
 
+  class NoUserProfileError < StandardError; end
+
   class Client
 
     def trophies(profile_id)
+      check_profile_id(profile_id)
       body = get_body("http://us.playstation.com/playstation/psn/profile/#{profile_id}/get_ordered_trophies_data",
                       "http://us.playstation.com/publictrophy/index.htm?onlinename=#{profile_id}/trophies")
 
       games = []
-      doc = Nokogiri::HTML(body)
+      doc = Nokogiri::HTML.fragment(body)
       doc.css('.slotcontent').each do |container|
         logo = container.at_css('.titlelogo img')["src"]
         title = container.at_css('.gameTitleSortField').content
@@ -24,6 +27,16 @@ module PsnTrophies
     end
 
     private
+
+    def check_profile_id(profile_id)
+      body = get_body("http://us.playstation.com/playstation/psn/profiles/#{profile_id}",
+                      "http://us.playstation.com/publictrophy/index.htm?onlinename=#{profile_id}")
+      doc = Nokogiri::HTML(body)
+      error_section = doc.at_css('.errorSection')
+      unless error_section.nil?
+        raise NoUserProfileError.new("No User Profile for #{profile_id}")
+      end
+    end
 
     def get_body(uri, referer)
       uri = URI.parse(uri)
