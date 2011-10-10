@@ -7,11 +7,13 @@ PATH
 GEM
   remote: http://rubygems.org/
   specs:
+    minitest (2.6.1)
     nokogiri (1.5.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  minitest
   nokogiri (~> 1.5.0)
   psn_trophies!
