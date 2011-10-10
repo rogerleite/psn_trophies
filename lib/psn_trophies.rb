@@ -7,7 +7,8 @@ module PsnTrophies
   class Client
 
     def trophies(profile_id)
-      body = get_body("http://us.playstation.com/playstation/psn/profile/#{profile_id}/get_ordered_trophies_data")
+      body = get_body("http://us.playstation.com/playstation/psn/profile/#{profile_id}/get_ordered_trophies_data",
+                      "http://us.playstation.com/publictrophy/index.htm?onlinename=#{profile_id}/trophies")
 
       games = []
       doc = Nokogiri::HTML(body)
@@ -24,7 +25,7 @@ module PsnTrophies
 
     private
 
-    def get_body(uri)
+    def get_body(uri, referer)
       uri = URI.parse(uri)
       http = Net::HTTP.new(uri.host, uri.port)
 
@@ -35,7 +36,7 @@ module PsnTrophies
       request["Accept-Language"] = "en-us,en;q=0.5"
       request["Accept-Charset"] = "ISO-8859-1,utf-8;q=0.7,*;q=0.7"
       request["Connection"] = "keep-alive"
-      request["Referer"] = "http://us.playstation.com/publictrophy/index.htm?onlinename=LeiteBR/trophies"
+      request["Referer"] = referer
 
       response = http.request(request)
       response.body
